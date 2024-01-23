@@ -8,7 +8,7 @@ async function uploadImg() {
     const fileInput = document.querySelector("#filechooser");
     const formData = new FormData();
 
-    formData.append("file", "human");
+    formData.append("file", fileInput.files[0]);
     const options = {
         method: "POST",
         body: formData,
@@ -17,6 +17,7 @@ async function uploadImg() {
     document.getElementById("img-before").src = URL.createObjectURL(
         fileInput.files[0]
     );
+    console.log(await response.json());
 }
 
 // document.getElementById("upload").addEventListener("click", () => {
