@@ -1,0 +1,56 @@
+.img-container {
+    width: 90%;
+    height: 500px;
+    background-color: grey;
+    margin: auto;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img {
+    width: 48%;
+    max-height: 100%;
+    color: aliceblue;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%; 
+}
+
+.input-field {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.inputfile {
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    background-color: #688ba4;
+    height: 40px;
+    width: 220px;
+    border-radius: 20px;
+    display: inline-block;
+    cursor: pointer; /* "hand" cursor */
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: #354855;
+}
+
