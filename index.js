@@ -1,5 +1,16 @@
+const models = {
+    silueta: "silueta",
+    general: "u2netp",
+    general2: "isnet-general-use",
+    human: "u2net_human_seg",
+};
+
+let model = models.general;
+
 async function get_image() {
-    const response = await fetch("http://127.0.0.1:8800/remove_background");
+    const response = await fetch(
+        `http://127.0.0.1:8800/remove_background/${model}`
+    );
     const image = await response.blob();
     document.getElementById("img-after").src = URL.createObjectURL(image);
 }
@@ -33,11 +44,11 @@ fileInput.addEventListener("change", () => {
     get_image();
 });
 
-document.getElementById("set-model").addEventListener("change", (e) => {
-    const options = {
-        method: "post",
-        body: { model: "human" },
-        "Content-Type": "application/json",
-    };
-    fetch("http://127.0.0.1:8800/set_model", options);
+document.getElementById("set-model").addEventListener("change", async (e) => {
+    const model_name = e.target.id;
+    model = models[model_name];
+    const fileInput = document.querySelector("#filechooser");
+    if (fileInput.files[0]) {
+        get_image();
+    }
 });
