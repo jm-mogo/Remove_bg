@@ -28,14 +28,15 @@ async function uploadImg() {
     document.getElementById("img-before").src = URL.createObjectURL(
         fileInput.files[0]
     );
-    console.log(await response.json());
+    return response;
 }
 
 const fileInput = document.querySelector("#filechooser");
-fileInput.addEventListener("change", () => {
+fileInput.addEventListener("change", async () => {
     console.log("upload");
-    uploadImg();
-    get_image();
+    uploadImg().then(() => {
+        get_image();
+    });
 });
 
 document.getElementById("set-model").addEventListener("change", async (e) => {
