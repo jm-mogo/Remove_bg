@@ -17,8 +17,13 @@ async function get_image() {
 
 async function uploadImg() {
     const fileInput = document.querySelector("#filechooser");
-    const formData = new FormData();
 
+    if (!fileInput.files[0]) {
+        console.log("Not file");
+        return;
+    }
+
+    const formData = new FormData();
     formData.append("file", fileInput.files[0]);
     const options = {
         method: "POST",
@@ -42,8 +47,7 @@ fileInput.addEventListener("change", async () => {
 document.getElementById("set-model").addEventListener("change", async (e) => {
     const model_name = e.target.id;
     model = models[model_name];
-    const fileInput = document.querySelector("#filechooser");
-    if (fileInput.files[0]) {
+    if (document.getElementById("img-before").src !== "#") {
         get_image();
     }
 });
