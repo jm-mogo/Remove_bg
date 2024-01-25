@@ -31,12 +31,6 @@ async function uploadImg() {
     console.log(await response.json());
 }
 
-// document.getElementById("upload").addEventListener("click", () => {
-//     console.log("upload");
-//     uploadImg();
-//     get_image();
-// });
-
 const fileInput = document.querySelector("#filechooser");
 fileInput.addEventListener("change", () => {
     console.log("upload");
