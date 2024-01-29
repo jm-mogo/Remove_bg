@@ -47,7 +47,22 @@ fileInput.addEventListener("change", async () => {
 document.getElementById("set-model").addEventListener("change", async (e) => {
     const model_name = e.target.id;
     model = models[model_name];
-    if (document.getElementById("img-before").src !== "#") {
+    if (!document.getElementById("img-before").src.includes("#")) {
         get_image();
     }
+});
+
+document.getElementById("download-btn").addEventListener("click", () => {
+    let ruta = document.getElementById("img-after").src;
+
+    if (ruta.includes("#")) return;
+
+    let enlace = document.createElement("a");
+    enlace.href = ruta;
+    enlace.download = "no_bg.png";
+    document.body.appendChild(enlace);
+    enlace.click();
+
+    //Borrrar el elemento
+    enlace.parentNode.removeChild(enlace);
 });

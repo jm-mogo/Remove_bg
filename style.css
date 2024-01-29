@@ -31,14 +31,15 @@ body {
     align-items: center;
     background: linear-gradient(310deg, #673bba 0%, #aa306e 45%, #ffa582 100%);
     box-shadow: 6px 6px 26px -9px rgba(0,0,0,0.52);
-    height: 60px;
+    height: 52px;
     width: 140px;
     border-radius: 10px;
     cursor: pointer; /* "hand" cursor */
 }
 
 /* .inputfile:focus + label, */
-.inputfile + label:hover {
+.inputfile + label:hover,
+.download-container button:hover {
     background: linear-gradient(310deg, #673bba 28%, #aa306e 72%, #ffa582 100%);
     box-shadow: none;
 }
@@ -67,4 +68,21 @@ body {
 
 img {
     max-width: 100%; 
+}
+
+.download-container {
+    display: flex;
+    justify-content: center;
+}
+
+.download-container button {
+    color: aliceblue;
+    font-size: 1rem;
+    border: none;
+    margin-top: 20px;
+    padding: 5px;
+    width: 120px;
+    border-radius: 5px;
+    background: linear-gradient(310deg, #673bba 0%, #aa306e 45%, #ffa582 100%);
+    cursor: pointer;
 }
