@@ -5,6 +5,7 @@ body {
 
 .input-field {
     margin-bottom: 20px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
 }
@@ -66,8 +67,13 @@ body {
     justify-content: center;
 }
 
-img {
+
+.images img {
     max-width: 100%; 
+    background-color: #e5e5f7;
+    background-image:  repeating-linear-gradient(45deg, #673bba 25%, transparent 25%, transparent 75%, #673bba 75%, #673bba), repeating-linear-gradient(45deg, #673bba 25%, #e5e5f7 25%, #e5e5f7 75%, #673bba 75%, #673bba);
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
 }
 
 .download-container {
