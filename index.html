@@ -15,6 +15,24 @@
         <label for="filechooser"> <img src="add_photo.svg" alt="pic" class="svg-color">Subir imagen</label>
 
     </div>
+    <form action="post" id="set-model">
+        <fieldset>
+            <legend>Elige un modelo</legend>
+            <div>
+                <input type="radio" name="model" id="general" checked="checked">
+                <label for="general">General</label>
+            </div>
+            <div>
+                <input type="radio" name="model" id="general2">
+                <label for="general2">General 2</label>
+            </div>
+            <div>
+                <input type="radio" name="model" id="human">
+                <label for="human">Human</label>
+            </div>
+        </fieldset>
+
+    </form>
 
 
 
@@ -34,20 +52,7 @@
         <button id="download-btn">Descargar</button>
     </div>
 
-    <form action="post" id="set-model">
-        <div>
-            <input type="radio" name="model" id="general" checked="checked">
-            <label for="general">General model</label>
-        </div>
-        <div>
-            <input type="radio" name="model" id="general2">
-            <label for="general2">General 2 model</label>
-        </div>
-        <div>
-            <input type="radio" name="model" id="human">
-            <label for="human">Human model</label>
-        </div>
-    </form>
+
 
 </body>
 
