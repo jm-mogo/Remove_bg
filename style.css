@@ -57,7 +57,7 @@ body {
 }
 
 .images {
-    width: 48%;
+    width: 42%;
     font-size: 0.8rem;
     display: flex;
     flex-direction: column;
@@ -66,5 +66,5 @@ body {
 }
 
 img {
-    max-width: 90%; 
+    max-width: 100%; 
 }
