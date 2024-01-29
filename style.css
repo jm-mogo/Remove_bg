@@ -57,6 +57,7 @@ form {
 }
 fieldset {
     display: flex;
+    
     justify-content: space-between;
     border-radius: 10px;
     border-color: #673bba;
@@ -85,7 +86,7 @@ input[type="radio"] {
     height: 1.15em;
     border: 0.15em solid currentColor;
     border-radius: 50%;
-    transform: translateY(-0.075em);
+    transform: translateY(0.18em);
     display: grid;
     place-content: center;
 }
