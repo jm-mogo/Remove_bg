@@ -166,7 +166,9 @@ input[type="radio"]:checked::before {
 
 .download-container button {
     color: aliceblue;
+    text-shadow: #0f0f10 0.5px 1px 18px;
     font-size: 1rem;
+    font-weight: 1000;
     border: none;
     margin-top: 20px;
     padding: 5px;
