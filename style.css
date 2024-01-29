@@ -4,6 +4,10 @@
     justify-content: center;
 }
 
+.svg-color {
+    filter: invert(100%);
+}
+
 .inputfile {
     width: 0.1px;
 	height: 0.1px;
@@ -23,11 +27,10 @@
     color: white;
     background: linear-gradient(310deg, #673bba 0%, #aa306e 45%, #ffa582 100%);
     box-shadow: 6px 6px 26px -9px rgba(0,0,0,0.52);
-    height: 40px;
-    width: 220px;
+    height: 60px;
+    width: 140px;
     border-radius: 10px;
     cursor: pointer; /* "hand" cursor */
-    transition: background 2s;
 }
 
 /* .inputfile:focus + label, */
